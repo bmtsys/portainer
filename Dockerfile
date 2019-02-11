@@ -13,5 +13,6 @@ ADD ./ /opt/portainer
 # Setup the python virtualenv
 RUN chown -R portainer: /opt/portainer
 USER portainer
-RUN cd /opt/portainer && bin/setup
-
+WORKDIR /opt/portainer
+#RUN cd /opt/portainer && bin/setup
+RUN bin/setup
